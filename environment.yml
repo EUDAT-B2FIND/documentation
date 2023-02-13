@@ -1,23 +1,14 @@
 # conda env create -f environment.yml
-name: b2f
+name: docs
 channels:
   - conda-forge
   - defaults
 dependencies:
   - pip
-  - python=3.8
-  - owslib
-  # ng
-  - beautifulsoup4
-  - ckanapi
-  - shapely
-  - jsonpath-ng
-  - click
-  - pandas
-  - tqdm
-  - colander
-  - networkx
-  - pyyaml
-  # tests
-  - pytest
-  - flake8
+  - python
+  - mkdocs
+  - pip:
+      - mkdocs-material
+      - mkdocs-awesome-pages-plugin
+      - mkdocs-exclude
+      - mkdocs-pymdownx-material-extras
