@@ -1,6 +1,6 @@
 ---
-site_name: B2ACCESS Documentation &nbsp;&nbsp;&nbsp;-- &nbsp;&nbsp;&nbsp;Work in Progress - Subject to Change
-site_dir: /tmp/b2access-doc
+site_name: B2FIND Documentation &nbsp;&nbsp;&nbsp;-- &nbsp;&nbsp;&nbsp;Work in Progress - Subject to Change
+site_dir: /tmp/b2find-doc
 docs_dir: ..
 # repo_url: https://github.com/EOSC-synergy/handbook
 # edit_uri: "edit/version-1"
@@ -36,7 +36,7 @@ extra:
     generator: false
     social:
       - icon: fontawesome/brands/github
-        link: https://gitlab.eudat.eu/b2access/documentation
+        link: https://gitlab.eudat.eu/b2find/documentation
 plugins:
     - exclude:
           glob:
@@ -45,14 +45,9 @@ plugins:
     - awesome-pages
 nav:
     - Overview: index.md
-    - User:
-        - How-to:
-          - ... enable MFA: 'howto-mfa.md'
-    - Service Provider:
-        - Attributes: 'attributes-sp.md'
-        - Service integration: 'howto-services.md'
-    - Identity Provider:
-        - Attributes: 'attributes-idp.md'
+    - For Users: forusers.md
+    - For Providers: forproviders.md
+    - About: about.md
       #- Architecture: architecture.md
       #- Attributes: attributes.md
       #- Authorisation: authorisation.md
