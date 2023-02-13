@@ -1,0 +1,68 @@
+---
+include:
+
+stages:
+  - build
+    #  - publish
+  - trigger
+
+variables:
+  MKDOCS_PROJECT_NAME: 'b2access-doc'
+  MKDOCS_SERVER_DIR: '/tmp/webroot/b2access-doc'
+
+  REPO_USER: 'cicd'
+  REPO_HOST: 'zam10212.zam.kfa-juelich.de'
+
+build-docs:
+  extends:
+    - .build-mkdocs
+  before_script:
+    - pip3 install mkdocs-exclude mkdocs-awesome-pages-plugin mkdocs-material
+
+      #publish-docs:
+      #  extends:
+      #    - .publish-mkdocs
+
+trigger_job:
+  stage: trigger
+  trigger:
+    project: sa.apweiler/eudat-documentation
+
+# MDDOCS
+.build-mkdocs: &build-mkdocs
+  stage: build
+  image: minidocks/mkdocs
+  script:
+    - |
+      pwd
+      set -x
+      (cd config/ ; mkdocs build)
+      # make sure script does not show up in the web
+      test -e rm /tmp/${MKDOCS_PROJECT_NAME}/build.sh && rm /tmp/${MKDOCS_PROJECT_NAME}/build.sh
+      mv /tmp/${MKDOCS_PROJECT_NAME} .
+  artifacts:
+    paths:
+      - ${MKDOCS_PROJECT_NAME}
+    expire_in: 1 hour
+
+# Use ssh-key-script from different include:
+#script:
+#  - !reference [.ssh-key-script]
+
+      #.publish-mkdocs: &publish-mkdocs
+      #  stage: publish
+      #  image: ubuntu:latest
+      #  script:
+      #    - apt update
+      #    - apt -y install rsync
+#
+#    - |
+#      set -x
+#      rsync -rlutopgxv --delete ${MKDOCS_PROJECT_NAME}/ \
+#        ${MKDOCS_SERVER_DIR} \
+#        --exclude report.html \
+#        --exclude devel \
+#        --exclude handbook.pdf \
+#        --chmod=ug=rwx \
+#        --chmod=o=rx
+##########################################################################

@@ -1,0 +1,58 @@
+---
+site_name: B2FIND Documentation &nbsp;&nbsp;&nbsp;-- &nbsp;&nbsp;&nbsp;Work in Progress - Subject to Change
+site_dir: /tmp/b2find-doc
+docs_dir: ..
+# repo_url: https://github.com/EOSC-synergy/handbook
+# edit_uri: "edit/version-1"
+theme:
+    #name: 'readthedocs'
+    name: material
+    hightlightjs: true
+    #navigation_depth: 2
+    logo: eudat.png
+    features:
+        - navigation.tabs
+        #- navigation.tabs.sticky
+        #- navigation.instant
+        - navigation.sections
+        #- navigation.tracking
+        #- navigation.indexes
+        - navigation.top
+        #- toc.integrate
+        - search.suggest
+copyright: "This documentation is licensed under <a href='https://creativecommons.org/licenses/by-sa/3.0/legalcode'>CC BY-SA 3.0 &nbsp; &nbsp; &nbsp;<img src='/b2access-doc/images/cc-by-sa_icon.png'></a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <!-- a href='SET-ME'>Imprint</a -->"
+markdown_extensions:
+    - smarty
+    - toc:
+        baselevel: 1
+        permalink: true
+        toc_depth: 3
+    - admonition
+    - def_list
+    - pymdownx.details
+    - pymdownx.superfences
+    - attr_list
+extra:
+    generator: false
+    social:
+      - icon: fontawesome/brands/github
+        link: https://gitlab.eudat.eu/b2find/documentation
+plugins:
+    - exclude:
+          glob:
+              - googledocs/*
+    - search
+    - awesome-pages
+nav:
+    - Overview: index.md
+    - For Users: forusers.md
+    - For Providers: forproviders.md
+    - About: about.md
+      #- Architecture: architecture.md
+      #- Attributes: attributes.md
+      #- Authorisation: authorisation.md
+      #- Assurance Details: assurance.md
+      #- Community AAI Software: community-aai-software.md
+      #- Policies: policies.md
+      #- FAQ: faq.md
+      #- Authors: authors.md
