@@ -14,6 +14,8 @@ Features
 * Metadata aggregation from community repositories, multiple metadata standards are supported
 * Harvested by OpenAIRE explorer
 
+Please find out more about our interdisciplinary discovery portal B2FIND in the [EUDAT Service Catalogue](https://sp.eudat.eu/catalog/resources/33bc21d5-f53d-4eed-9a15-56f98f5c7f69).
+
 ## Target Audience
 Everyone interested in using the portal for disvocering research output, (metada)data providers who are interested in being integrated in B2FIND.
 

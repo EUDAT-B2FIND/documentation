@@ -45,14 +45,8 @@ plugins:
     - awesome-pages
 nav:
     - Overview: index.md
-    - For Users: forusers.md
-    - For Providers: forproviders.md
+    - For Users: 
+        - Searching for Metadata: search.md
+        - Providing Metadata: provide.md 
+    - For Developers: devs.md
     - About: about.md
-      #- Architecture: architecture.md
-      #- Attributes: attributes.md
-      #- Authorisation: authorisation.md
-      #- Assurance Details: assurance.md
-      #- Community AAI Software: community-aai-software.md
-      #- Policies: policies.md
-      #- FAQ: faq.md
-      #- Authors: authors.md
