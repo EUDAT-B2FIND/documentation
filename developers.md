@@ -1,0 +1,1 @@
+All B2FIND software is openly accessible: https://github.com/EUDAT-B2FIND/
